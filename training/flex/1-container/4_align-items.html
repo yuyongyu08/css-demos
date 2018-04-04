@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-wrap</title>
+    <style>
+        .container{
+            display: flex;
+            background: #f2f4f6;
+            padding: 20px;
+            margin: 20px;
+            height: 300px;
+            align-items: stretch;
+        }
+
+        li:nth-of-type(2) .container{
+            align-items: flex-start;
+        }
+        li:nth-of-type(3) .container{
+            align-items: flex-end;
+        }
+        li:nth-of-type(4) .container{
+            align-items: center;
+        }
+        li:nth-of-type(5) .container{
+            align-items: baseline;
+        }
+
+
+        .item{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .item:nth-of-type(2){
+            height: 200px;
+            background-color: green;
+        }
+        .item:nth-of-type(3){
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>
+        <h2>align-items: stretch</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>align-items: flex-start</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>align-items: flex-end</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>align-items: center</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>align-items: baseline</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-wrap</title>
+    <style>
+        .container{
+            display: flex;
+            background: #f2f4f6;
+            padding: 20px;
+            margin: 20px;
+            justify-content: flex-start;
+        }
+
+        li:nth-of-type(2) .container{
+            justify-content: flex-end;
+        }
+        li:nth-of-type(3) .container{
+            justify-content: center;
+        }
+        li:nth-of-type(4) .container{
+            justify-content: space-between;
+        }
+        li:nth-of-type(5) .container{
+            justify-content: space-around;
+        }
+        li:nth-of-type(6) .container{
+            justify-content: space-evenly;
+        }
+
+
+
+        .item{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .item:nth-of-type(2){
+            height: 200px;
+            background-color: green;
+        }
+        .item:nth-of-type(3){
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>
+        <h2>justify-content: flex-start</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>justify-content: flex-end</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>justify-content: center</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>justify-content: space-between</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>justify-content: space-around</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>justify-content: space-evenly(flex 容器起始边缘和第一个 flex 项之间的间距和每个相邻 flex 项之间的间距是相等。)</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+</ol>
+</body>
+</html>

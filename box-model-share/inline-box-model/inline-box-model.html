@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline element box-model</title>
+    <style>
+        div{
+            line-height: 2em;
+        }
+
+        span,i,strong{
+            border: 1px dotted;
+        }
+
+        span{
+            font-size: 40px;
+        }
+
+        i{
+            font-size: 20px;
+        }
+
+        strong{
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行我是上一行</p>
+    <span>a line</span> <strong>box</strong> <span>containing</span> <i>some text</i> <span>and element</span>
+    <p>我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行我是下一行</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color & backrounde-color in box model</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .include-color{
+            margin: 30px;
+            border: 30px solid red;
+            padding: 30px;
+            height: 200px;
+            color: green;
+        }
+
+        .include-background-color{
+            margin: 30px;
+            border: 30px solid;
+            padding: 30px;
+            height: 200px;
+            color: green;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<h2>前景色（color）对盒模型的影响</h2>
+<div class="include-color">
+    注意border的颜色！！！
+</div>
+
+<h2>背景色（background-color）对盒模型的影响</h2>
+<div class="include-background-color">
+    注意背景色蔓延的范围：content + padding + border ！！！
+</div>
+
+</body>
+</html>

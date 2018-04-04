@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>文本两端对齐 by 司徒正美</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+        .box{
+            border: 1px solid gray;
+        }
+
+
+        .half:before { content: '\2002'; speak: none; }
+        .full:before { content: '\2003'; speak: none; }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div>姓&#x3000;&#x3000;名</div>
+    <div>性&emsp;&emsp;别</div>
+    <div>所&thinsp;在&#x2003;&#x2003;地</div>
+    <div>所&nbsp;在&#x2003;&#x2003;地</div>
+    <div>工作单位</div>
+</div>
+<div class="box" style="margin-top: 20px">
+    <div>姓<span class="full"></span><span class="full"></span>名</div>
+    <div>性<span class="full"></span><span class="full"></span>别</div>
+    <div>所<span class="half"></span>在<span class="half"></span>地</div>
+    <div>工作单位</div>
+</div>
+
+
+</body>
+</html>

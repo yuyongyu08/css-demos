@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块状元素盒模型</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div.A{
+            background-color: green;
+            height: 500px;
+        }
+
+        div.a{
+            display: block;
+            height: 80px;
+            width: 100px;
+            background-color: red;
+            margin-left: -20px;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <div class="a">margin</div>
+    </div>
+</body>
+</html>

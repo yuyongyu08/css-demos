@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-wrap</title>
+    <style>
+        .container{
+            display: flex;
+            background: #f2f4f6;
+            padding: 20px;
+            margin: 20px;
+            flex-wrap: nowrap;
+        }
+
+        li:nth-of-type(2) .container{
+            flex-wrap: wrap;
+        }
+        li:nth-of-type(3) .container{
+            flex-wrap: wrap-reverse;
+        }
+
+
+        .item{
+            display: inline-block;
+            width: 850px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .item:nth-of-type(2){
+            height: 200px;
+            background-color: green;
+        }
+        .item:nth-of-type(3){
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>
+        <h2>flex-wrap: nowrap</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>flex-wrap: wrap</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>flex-wrap: wrap-reverse</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+</ol>
+</body>
+</html>

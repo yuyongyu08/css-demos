@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+    <style>
+        .container{
+            background: #f2f4f6;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+        }
+
+        .item{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            order: 0;
+        }
+
+        .item:nth-of-type(2){
+            height: 200px;
+            background-color: green;
+            order: -1;
+        }
+        .item:nth-of-type(3){
+            height: 100px;
+            background-color: lightcoral;
+            order: 99;
+        }
+    </style>
+</head>
+<body>
+<h2>order</h2>
+<div class="container">
+    <div class="item">item 1, order:0</div>
+    <div class="item">item 2, order:-1</div>
+    <div class="item">item 3, order:99</div>
+</div>
+</body>
+</html>

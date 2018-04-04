@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border can't be percent</title>
+    <style>
+
+        .parent{
+            width: 1000px;
+            height: 500px;
+            border: 1px solid red;
+        }
+        .child{
+            margin: 10%;
+            padding: 10%;
+            border: 30px solid green;
+            height: 20%;
+            width: 20%;
+        }
+
+        strong{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child">
+        border不可以为百分数，其他都可以，且相对于父元素<strong>内容</strong>尺寸计算！！！
+    </div>
+</div>
+
+</body>
+</html>

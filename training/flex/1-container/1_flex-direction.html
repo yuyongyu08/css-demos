@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-direction</title>
+    <style>
+        .container{
+            background: #f2f4f6;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li:nth-of-type(2) .container{
+            flex-direction: row-reverse;
+        }
+        li:nth-of-type(3) .container{
+            flex-direction: column;
+        }
+        li:nth-of-type(4) .container{
+            flex-direction: column-reverse;
+        }
+
+        .item{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .item:nth-of-type(2){
+            height: 200px;
+            background-color: green;
+        }
+        .item:nth-of-type(3){
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>
+        <h2>flex-direction: row</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>flex-direction: row-reverse</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>flex-direction: column</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+    <li>
+        <h2>flex-direction: column-reverse</h2>
+        <div class="container">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </li>
+</ol>
+
+
+
+
+
+
+
+</body>
+</html>
