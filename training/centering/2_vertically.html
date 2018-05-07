@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+    <style>
+        .container{
+            border: 1px solid #eee;
+            margin-top: 10px;
+        }
+        
+        .inline-item{
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .table-container{
+            display: table;
+            height: 200px;
+        }
+
+
+        .table-item{
+            display: table-cell;
+            vertical-align: middle;
+            background: #c5c6c8;
+        }
+
+        .table-item:nth-of-type(2){
+            background: #6a9fc8;
+        }
+
+
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+        }
+
+        .block-container{
+            height: 200px;
+            position: relative;
+        }
+
+        .certain-height-block-item{
+            height: 100px;
+            background: #97FF65;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+        }
+
+        .uncertain-height-block-item{
+            background: #97FF65;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>垂直居中</h1>
+
+
+    <h2>1.单行内联（inline-）元素垂直居中</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>内联元素height确定，内联元素height = line-height</li>
+        <li>内联元素height不确定，内联元素仅设置line-height即可</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container">
+        <span class="inline-item">这是个内联元素</span>
+    </div>
+    <div class="container">
+        <span class="inline-item" style="display: inline-block">这是个内联块(inline-block)元素</span>
+    </div>
+    <div class="container">
+        <span class="inline-item" style="display: inline-table">这是个内联表(inline-table)元素</span>
+    </div>
+    <div class="container">
+        <span class="inline-item" style="display: inline-flex">这是个伸缩内联（inline-flex）元素</span>
+    </div>
+
+
+
+
+    <h2>2.多行元素垂直居中</h2>
+    <h3>2.1 利用table布局</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：display: table</li>
+        <li>子元素：display: table-cell、vertical-align: middle</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container table-container">
+        <div class="table-item">表格(table-cell)元素1</div>
+        <div class="table-item">
+            表格(table-cell)元素2
+            <div>1、子元素</div>
+            <div>2、另一个子元素</div>
+        </div>
+        <span class="table-item">表格(table-cell)元素3</span>
+    </div>
+
+
+
+    <h3>2.2 利用flex布局</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：display: flex</li>
+        <li>父容器：flex-direction: column</li>
+        <li>父容器：justify-content: center</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container flex-container">
+        <div>第1行文本</div>
+        <div>第2行文本</div>
+        <div>第3行文本</div>
+    </div>
+
+
+    <h2>3.块状元素垂直居中</h2>
+    <h3>2.1 高度固定的块状元素</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：position: relative</li>
+        <li>子元素：height确定、position: absolute、top: 50%、margin-top: height/2</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container block-container">
+        <div class="certain-height-block-item">高度固定的块级元素</div>
+    </div>
+
+    <h3>2.1 高度不固定的块状元素</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：position: relative</li>
+        <li>子元素：height确定、position: absolute、top: 50%、margin-top: -(height/2)</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container block-container">
+        <div class="uncertain-height-block-item">
+            高度不固定的块级元素<br/>transform: translateY()注意浏览器兼容性
+        </div>
+    </div>
+
+
+
+</body>
+</html>

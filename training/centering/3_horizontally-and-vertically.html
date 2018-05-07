@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中</title>
+    <style>
+        .container{
+            border: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        .certain-height-width-container, .uncertain-height-width-container{
+            height: 200px;
+            position: relative;
+        }
+
+        .certain-height-width-item{
+            height: 100px;
+            width: 200px;
+            background: #97FF65;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+
+        .uncertain-height-width-item{
+            height: 100px;
+            width: 200px;
+            background: #97FF65;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            transform: translateX(-50%);
+        }
+
+
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certain-height-width-flex-item{
+            height: 100px;
+            width: 200px;
+            background: #97FF65;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>垂直居中</h1>
+
+
+    <h2>1.高度固定，宽度固定</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：position: relative</li>
+        <li>子元素：height确定、width确定、position: absolute、top: 50%、left: 50%、margin-top: -(height/2)、margin-left: -(width/2)</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container certain-height-width-container">
+        <div class="certain-height-width-item">高度和宽度都固定的元素</div>
+    </div>
+
+    <h2>2.高度宽度不固定</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：position: relative</li>
+        <li>子元素：height确定、width确定、position: absolute、top: 50%、left: 50%、translateY(-height/2)、transform: translateX(-width/2)</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container certain-height-width-container">
+        <div class="certain-height-width-item">高度和宽度都不固定的元素</div>
+    </div>
+
+
+    <h2>3.利用flex布局</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：display: flex</li>
+        <li>父容器：flex-direction: center</li>
+        <li>父容器：justify-content: center</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container flex-container">
+        <div class="certain-height-width-flex-item">高度和宽度都固定的元素</div>
+        <div>高度和宽度都不固定的元素</div>
+    </div>
+
+    <h2>4.屏幕上的水平垂直居中</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>爷容器：display: table、position: absolute、height: 100%、width: 100%</li>
+        <li>父容器：display: table-cell、vertical-align: center</li>
+        <li>子容器：margin-left: auto、margin-right: auto、width固定</li>
+    </ul>
+    <h4>实例：</h4>
+
+
+
+</body>
+</html>

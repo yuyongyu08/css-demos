@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+    <style>
+        .container{
+            border: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        .inline-container{
+            text-align: center;
+        }
+        
+        .block-item{
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #c5c6c8;
+        }
+
+        .inline-block-item{
+            display: inline-block;
+            background: #c5c6c8;
+        }
+
+        .flex-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-item{
+            width: 200px;
+            background: #c5c6c8;
+        }
+
+        .flex-item:last-of-type{
+            background: antiquewhite;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>水平居中</h1>
+
+    <h2>1.内联元素水平居中</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>内联元素在块状元素内</li>
+        <li>块状元素上设置text-align: center</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container inline-container">
+        <span>这是个内联元素</span>
+    </div>
+    <div class="container inline-container">
+        <span style="display: inline-block">这是个内联块(inline-block)元素</span>
+    </div>
+    <div class="container inline-container">
+        <span style="display: inline-table">这是个内联表(inline-table)元素</span>
+    </div>
+    <div class="container inline-container">
+        <span style="display: inline-flex">这是个伸缩内联（inline-flex）元素</span>
+    </div>
+
+
+
+    <h2>2.块状元素水平居中</h2>
+    <h4>要点：</h4>
+    <ul>
+        <li>块状元素：定宽</li>
+        <li>块状元素：margin-left: auto、margin-right: auto</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container">
+        <div class="block-item">定宽的块状元素</div>
+    </div>
+    <div class="container">
+        <div style="display: inline-block; color: red;" class="block-item">警告：定宽的内联块(inline-block)元素并不适用！</div>
+    </div>
+
+
+
+    <h2>3.多块状元素水平居中</h2>
+    <h3>3.1 利用inline-block</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：text-align: center</li>
+        <li>块状元素：display: inline-block</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container inline-container">
+        <div class="inline-block-item">内联块(inline-block)元素1</div>
+        <div class="inline-block-item">内联块(inline-block)元素2</div>
+        <span class="inline-block-item">内联块(inline-block)元素3</span>
+    </div>
+
+
+
+    <h3>3.2 利用display: flex</h3>
+    <h4>要点：</h4>
+    <ul>
+        <li>父容器：display: flex</li>
+        <li>父容器：justify-content: center</li>
+    </ul>
+    <h4>实例：</h4>
+    <div class="container flex-container">
+        <div class="flex-item">块状元素1</div>
+        <div class="flex-item">块状元素2</div>
+    </div>
+
+</body>
+</html>
