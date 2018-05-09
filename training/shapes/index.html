@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css实现各种基本图形</title>
+    <style>
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+
+        .oval{
+            display: inline-block;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .oval-h{
+            width: 200px;
+            height: 100px;
+        }
+        .oval-v{
+            width: 100px;
+            height: 200px;
+        }
+
+
+        .isosceles-triangle{
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border: 50px solid transparent;
+        }
+        .isosceles-triangle-top{
+            border-bottom: 100px solid red;
+            border-top-width: 0;
+        }
+        .isosceles-triangle-bottom{
+            border-top: 100px solid red;
+            border-bottom-width: 0;
+        }
+        .isosceles-triangle-left{
+            border-right: 100px solid red;
+            border-left-width: 0;
+        }
+        .isosceles-triangle-right{
+            border-left: 100px solid red;
+            border-right-width: 0;
+        }
+
+
+        .parallelogram{
+            margin: 20px;
+            display: inline-block;
+            height: 100px;
+            width: 150px;
+            background-color: red;
+        }
+        .parallelogram-top{
+            transform: skew(0, 20deg);
+        }
+        .parallelogram-bottom{
+            transform: skew(0, -20deg);
+        }
+        .parallelogram-left{
+            transform: skew(20deg, 0);
+        }
+        .parallelogram-right{
+            transform: skew(-20deg, 0);
+        }
+
+        .trapezoid{
+            display: inline-block;
+            background-color: red;
+            border: 50px solid #fff;
+        }
+        .trapezoid-top{
+            width: 100px;
+            height: 0;
+            border-top-width: 0;
+            border-bottom: 100px solid transparent;
+        }
+        .trapezoid-bottom{
+            width: 100px;
+            height: 0;
+            border-bottom-width: 0;
+            border-top: 100px solid transparent;
+        }
+        .trapezoid-left{
+            width: 0;
+            height: 100px;
+            border-left-width: 0;
+            border-right: 100px solid transparent;
+        }
+        .trapezoid-right{
+            width: 0;
+            height: 100px;
+            border-right-width: 0;
+            border-left: 100px solid transparent;
+        }
+
+        .pentagon{
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 0;
+            background-color: red;
+            border: 25px solid #fff;
+            border-bottom-width: 0;
+            border-top: 50px solid transparent;
+        }
+
+        .pentagon::before{
+            content: "";
+            height: 0;
+            width: 0;
+            border: 50px solid transparent;
+            border-bottom: 35px solid red;
+            border-top-width: 0;
+            position: absolute;
+            top: -85px;
+            left: -25px;
+        }
+
+        .pentagon-1{
+            display: inline-block;
+            position: relative;
+            width: 0;
+            height: 0;
+            border: 40px solid transparent;
+            border-bottom: 125px solid red;
+            border-top-width: 0;
+        }
+
+        .pentagon-1::before{
+            content: '';
+            width: 0;
+            height: 0;
+            border: 65px solid transparent;
+            border-right: 50px solid red;
+            border-left-width: 0;
+            transform: rotate(18deg);
+            position: absolute;
+            left: -68px;
+            top: -10px;
+        }
+
+        .pentagon-1::after{
+            content: '';
+            width: 0;
+            height: 0;
+            border: 65px solid transparent;
+            border-left: 50px solid red;
+            border-right-width: 0;
+            transform: rotate(-18deg);
+            position: absolute;
+            top: -10px;
+            right: -68px;
+        }
+
+
+        #yin-yang {
+            width: 96px;
+            height: 48px;
+            background: #eee;
+            border-color: red;
+            border-style: solid;
+            border-width: 2px 2px 50px 2px;
+            border-radius: 100%;
+            position: relative;
+        }
+
+        #yin-yang:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background: #eee;
+            border: 18px solid red;
+            border-radius: 100%;
+            width: 12px;
+            height: 12px;
+        }
+
+        #yin-yang:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: red;
+            border: 18px solid #eee;
+            border-radius:100%;
+            width: 12px;
+            height: 12px;
+        }
+
+
+    </style>
+</head>
+<body>
+<a href="https://blog.csdn.net/dearmorning/article/details/55684378">参见</a>
+
+
+<h2>1.圆</h2>
+<div class="circle"></div>
+
+<h2>2.椭圆</h2>
+<div class="oval oval-h"></div>
+<div class="oval oval-v"></div>
+
+
+<h2>3.等腰三角形</h2>
+<div class="isosceles-triangle isosceles-triangle-top"></div>
+<div class="isosceles-triangle isosceles-triangle-bottom"></div>
+<div class="isosceles-triangle isosceles-triangle-left"></div>
+<div class="isosceles-triangle isosceles-triangle-right"></div>
+
+<h2>4.平行四边形</h2>
+<div class="parallelogram parallelogram-top"></div>
+<div class="parallelogram parallelogram-bottom"></div>
+<div class="parallelogram parallelogram-left"></div>
+<div class="parallelogram parallelogram-right"></div>
+
+<h2>5.梯形</h2>
+<div class="trapezoid trapezoid-top"></div>
+<div class="trapezoid trapezoid-bottom"></div>
+<div class="trapezoid trapezoid-left"></div>
+<div class="trapezoid trapezoid-right"></div>
+
+
+<h2>6.五边形</h2>
+<div class="pentagon"></div>
+<div class="pentagon-1"></div>
+
+<h2>7.六边形</h2>
+思路：两个梯形拼接
+
+<h2>8.八边形</h2>
+思路：两个梯形+矩形
+
+<h2>9.五角星</h2>
+思路：
+
+
+<h2>10.六角星</h2>
+思路：两个等腰三角形叠加
+
+
+<h2>11.八角星</h2>
+思路：两个正方形叠加
+
+<h2>12.十二角星</h2>
+思路：三个正方形叠加
+
+
+<h2>13.心形</h2>
+思路：左上角半圆+四方形旋转45度+右上角半圆
+
+
+<h2>14.阴阳</h2>
+<div id="yin-yang"></div>
+
+
+
+
+</body>
+</html>
