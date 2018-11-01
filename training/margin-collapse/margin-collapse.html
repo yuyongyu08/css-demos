@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距折叠</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .margin{
+            width: 100px;
+            height: 100px;
+        }
+
+        .posi-1{
+            background: red;
+            margin-bottom: 10px;
+        }
+
+        .posi-2{
+            background: green;
+            margin-top: 20px;
+        }
+
+        .neg-1{
+            background: yellow;
+            margin-bottom: -30px;
+        }
+
+        .neg-2{
+            background: purple;
+            margin-top: -20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<h2>
+    1.都为正数
+</h2>
+<div class="margin posi-1">margin: 10px</div>
+<div class="margin posi-2">margin: 20px</div>
+
+
+<h2>
+    2.都为负数
+</h2>
+<div class="margin neg-1">margin: -20px</div>
+<div class="margin neg-2">margin: -10px</div>
+
+<h2>
+    3.一正一负
+</h2>
+<div class="margin posi-1">margin: 10px</div>
+<div class="margin neg-2">margin: -20px</div>
+
+
+
+
+
+
+<ul>
+    <li>
+        两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值
+    </li>
+    <li>
+        两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值
+    </li>
+    <li>
+        两个外边距一正一负时，折叠结果是两者的相加的和
+    </li>
+</ul>
+
+</body>
+</html>

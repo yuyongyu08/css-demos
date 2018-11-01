@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型box-sizing</title>
+    <style>
+        div{
+            height: 600px;
+            float: left;
+        }
+
+        .left{
+            width: 25%;
+            background: green;
+            border: 10px; /*导致right下移*/
+            box-sizing: border-box; /*解决方案*/
+        }
+
+        .mid{
+            width: 50%;
+            background: red;
+        }
+
+        .right{
+            width: 25%;
+            background: yellow;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="left" class="left">left</div>
+<div class="mid">mid</div>
+<div class="right">right</div>
+
+</body>
+</html>

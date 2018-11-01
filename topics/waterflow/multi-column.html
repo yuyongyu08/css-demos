@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列实现</title>
+    <style>
+        ul{
+            margin: 0 auto;
+            width: 400px;
+            list-style: none;
+            border: 1px solid green;
+            padding: 20px;
+            column-count: 2;
+            column-width: 100px;
+            column-gap: 20px;
+        }
+
+        li{
+            height: 300px;
+            margin-bottom: 20px;
+            background-color: #6a9fc8;
+            break-inside: avoid;
+        }
+
+
+        li:nth-of-type(2n){
+            height: 200px;
+            background-color: antiquewhite;
+        }
+
+        li:nth-of-type(3n){
+            height: 250px;
+            background-color: aquamarine;
+        }
+
+
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+资料：<a href="http://www.w3school.com.cn/css3/css3_multiple_columns.asp" target="_blank">w3c-多列</a>
+
+<script>
+    document.querySelectorAll('li').forEach(function (value, index) {
+        value.addEventListener('click', function (ev) {
+            ev.target.style.height = (ev.target.offsetHeight + 50) + 'px';
+        })
+    })
+</script>
+</body>
+</html>

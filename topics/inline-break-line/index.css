@@ -1,0 +1,30 @@
+span{
+    border: 1px solid;
+}
+
+.wrapper{
+    font-size: 0;
+}
+
+.wrapper span{
+    font-size: 16px;
+}
+
+#wrapper2{
+    letter-spacing: -0.5em;
+}
+
+#wrapper2 span{
+    letter-spacing: normal;
+}
+
+ul{
+    padding: 0;
+}
+li{
+    display: inline-block;
+}
+
+li::after{
+    content: '>';
+}

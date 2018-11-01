@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin-bottom: 20px;
+        }
+
+        .original{
+            width: 0;
+            height: 0;
+        }
+
+
+        /* bad */
+
+        .top{
+            border-top: 50px solid green;
+            border-left: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+        .right{
+            border-top: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-right: 50px solid green;
+        }
+
+        .bottom{
+            border-top: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-bottom: 50px solid green;
+            border-right: 50px solid transparent;
+        }
+
+        .left{
+            border-top: 50px solid transparent;
+            border-left: 50px solid green;
+            border-bottom: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+
+        /* good */
+
+        .original-g{
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+        }
+
+        .top-g{
+            border-top-color: green;
+        }
+
+        .right-g{
+            border-right-color: green;
+        }
+
+        .bottom-g{
+            border-bottom-color: green;
+        }
+
+        .left-g{
+            border-left-color: green;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="original top"></div>
+    <div class="original right"></div>
+    <div class="original bottom"></div>
+    <div class="original left"></div>
+
+
+    <div class="original-g top-g"></div>
+    <div class="original-g right-g"></div>
+    <div class="original-g bottom-g"></div>
+    <div class="original-g left-g"></div>
+
+</body>
+</html>

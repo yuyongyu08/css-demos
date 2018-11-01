@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素的使用</title>
+    <style>
+        .mid-spliter{
+            margin-right: 5px;
+        }
+
+        .mid-spliter::after{
+            content: '|';
+            padding-left: 10px;
+        }
+
+        .mid-spliter:last-of-type::after{
+            content: '';
+        }
+
+        .decorator::after, .decorator::before{
+            content: '-';
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>伪元素的使用，告别小图标</h2>
+
+<h3>中间分割线</h3>
+<div>
+    <span class="mid-spliter">王先生</span>
+    <span class="mid-spliter">90后</span>
+    <span class="mid-spliter">天蝎座</span>
+</div>
+
+
+<h3>两端修饰符</h3>
+<div class="decorator">打造简单人人信赖的生活服务平台</div>
+
+</body>
+</html>

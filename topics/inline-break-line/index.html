@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<h3>问题：连续span元素出现诡异的间距</h3>
+<div>
+    <span>第一个</span>
+    <span>第二个</span>
+    <span>第三个</span>
+</div>
+
+<h3>原因：行内元素之间在换行时会产生一个换行符号</h3>
+
+<h3>解决办法1：span挨着写在一行</h3>
+<div>
+    <span>第一个</span><span>第二个</span><span>第三个</span>
+</div>
+
+
+<h3>解决办法2：父元素的font-size设置为0，span的字体设置固定大小（隐患：text-ellipsis失效）</h3>
+
+<div id="wrapper">
+    <span>第一个</span>
+    <span>第二个</span>
+    <span>第三个</span>
+</div>
+
+
+<h3>解决办法3：父元素的letter-space设置为-0.5em，span的letter-space设置为</h3>
+
+<div id="wrapper2">
+    <span>第一个</span>
+    <span>第二个</span>
+    <span>第三个</span>
+</div>
+
+
+
+<h3>解决办法4：奇技淫巧，利用注释</h3>
+
+<div>
+    <span>第一个</span><!--
+ --><span>第二个</span><!--
+ --><span>第三个</span>
+</div>
+
+
+<ul>
+    <li><a href="/">首页</a></li>
+</ul>
+</body>
+</html>
