@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex实现九宫格</title>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 60%;
+            padding: 10px;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+
+
+        /* 1个元素 */
+
+        .one-item {}
+
+        .one-item li {
+            height: calc(60vw - 20px);
+        }
+
+
+
+        /* 4个元素 */
+
+        .four-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .four-items li {
+            width: calc((60vw - 30px)/2);
+            height: calc((60vw - 30px)/2);
+            margin: 0 10px 10px 0;
+        }
+
+       li:nth-of-type(2),
+        li:nth-of-type(4) {
+            margin-right: 0;
+        }
+
+        li:nth-of-type(3),
+        li:nth-of-type(4) {
+            margin-bottom: 0;
+        }
+
+
+
+
+
+
+
+
+
+        /* 其他情况 */
+
+
+        .other-items {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="one-item">
+            <li>1</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="four-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+
+</html>
