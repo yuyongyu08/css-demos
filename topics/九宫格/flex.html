@@ -14,7 +14,7 @@
         }
 
         ul {
-            width: 60%;
+            width: 60vw;
             padding: 10px;
         }
 
@@ -35,7 +35,8 @@
         .one-item {}
 
         .one-item li {
-            height: calc(60vw - 20px);
+            width: 100%;
+            height: 60vw;
         }
 
 
@@ -48,33 +49,46 @@
         }
 
         .four-items li {
-            width: calc((60vw - 30px)/2);
-            height: calc((60vw - 30px)/2);
+            width: calc((60vw - 10px)/2);
+            height: calc((60vw - 10px)/2);
             margin: 0 10px 10px 0;
         }
 
-       li:nth-of-type(2),
-        li:nth-of-type(4) {
+        .four-items li:nth-of-type(2),
+        .four-items li:nth-of-type(4) {
             margin-right: 0;
         }
 
-        li:nth-of-type(3),
-        li:nth-of-type(4) {
+        .four-items li:nth-of-type(3),
+        .four-items li:nth-of-type(4) {
             margin-bottom: 0;
         }
 
 
-
-
-
-
-
-
-
         /* 其他情况 */
+        .other-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .other-items li {
+            width: calc((60vw - 20px)/3);
+            height: calc((60vw - 20px)/3);
+            margin: 0 10px 10px 0;
+        }
+
+        
+        .other-items li:nth-of-type(3n) { /* 所有右侧的都去掉 margin-right*/
+            margin-right: 0;
+        }
+
+        .other-items li:nth-last-of-type(1),
+        .other-items li:nth-last-of-type(2),
+        .other-items li:nth-last-of-type(3){ /* 最后3个item的都去掉 margin-bottom*/
+            margin-bottom: 0;
+        }
 
 
-        .other-items {}
     </style>
 </head>
 
@@ -127,7 +141,45 @@
             <li>4</li>
             <li>5</li>
             <li>6</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
             <li>7</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="other-items">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
         </ul>
     </div>
 </body>
