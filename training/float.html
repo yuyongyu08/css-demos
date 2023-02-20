@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <style>
-        .container{
-            width: 200px;
-            background-color: green;
-        }
+      .container {
+        width: 400px;
+        background-color: green;
+      }
 
-        .nomal,.nomal2{
-            display: inline-block;
-            height: 100px;
-            width: 100px;
-            background-color: red;
-        }
+      .left-1 {
+        float: left;
+        height: 300px;
+        width: 100px;
+        background-color: aqua;
+        margin-right: 10px;
+      }
+      .left-2 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin-left: 10px;
+      }
 
-        .float{
-            display: inline-block;
-            float: left;
-            height: 50px;
-            width: 50px;
-            background-color: yellow;
-        }
+      .right-1,
+      .right-2 {
+        float: right;
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+
+      .text {
+        /* clear: both; */
+      }
     </style>
-</head>
-<body>
-<div class="container">
-    <div class="nomal">
-        hello float!
+  </head>
+  <body>
+    <div class="container">
+      <h1>观察float产生的影响</h1>
+      <div class="left-1">float-left-1</div>
+      <div class="left-2">float-left-2</div>
+      <div class="right-1">float-right-1</div>
+      <p class="text">
+        我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本
+      </p>
+      <div class="right-2">float-right-2</div>
+      <div>
+        我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本我是块状元素内的文本
+      </div>
     </div>
-    <div class="nomal2">
-        hello float2!
-    </div>
-    <div class="float">
-        float element!
-    </div>
-
-    <div style="background-color: gray">
-        <div>我是一行文本</div>
-        <div style="float: right">
-            点赞
-        </div>
-    </div>
-</div>
-</body>
+  </body>
 </html>

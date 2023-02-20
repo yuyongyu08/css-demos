@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>双飞翼布局</title>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+      }
+
+      header,
+      footer {
+        line-height: 80px;
+        background-color: green;
+      }
+
+      .body {
+        min-height: calc(100vh - 80px);
+        overflow: scroll;
+      }
+
+      .body .container {
+        float: left;
+        width: 100%;
+      }
+
+      .body .container .main {
+        background-color: blueviolet;
+        height: 1400px;
+        margin: 0 200px 0 300px;
+      }
+
+      .body .left {
+        float: left;
+        width: 300px;
+        height: 500px;
+        background-color: aquamarine;
+        margin-left: -100%;
+      }
+
+      .body .right {
+        float: left;
+        width: 200px;
+        height: 600px;
+        background-color: lightcoral;
+        margin-left: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>头部-头部-头部-头部-头部-头部-头部</header>
+    <section class="body">
+      <section class="container">
+        <div class="main">主要内容-主要内容-主要内容-主要内容-主要内容-主要内容</div>
+      </section>
+      <aside class="left">左边栏-左边栏-左边栏-左边栏-左边栏-左边栏-左边栏</aside>
+      <aside class="right">右边栏-右边栏-右边栏-右边栏-右边栏-右边栏-右边栏</aside>
+    </section>
+    <footer>底部-底部-底部-底部-底部-底部-底部</footer>
+  </body>
+</html>

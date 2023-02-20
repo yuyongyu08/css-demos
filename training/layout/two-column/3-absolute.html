@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        overflow: scroll;
+        background-color: aqua;
+      }
+
+      .right {
+        height: 1500px; /*用于测试滚动*/
+        min-height: 100vh;
+        margin-left: 200px;
+        background-color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="left">left</aside>
+    <section class="right">right</section>
+  </body>
+</html>

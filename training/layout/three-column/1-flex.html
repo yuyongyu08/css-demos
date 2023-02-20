@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3列布局</title>
+    <style>
+      header,
+      footer {
+        line-height: 80px;
+        background-color: green;
+      }
+
+      .body {
+        display: flex;
+        min-height: calc(100vh - 80px - 120px);
+      }
+
+      .main {
+        width: 100%;
+        height: 1500px; /*测试滚动*/
+        background-color: beige;
+      }
+
+      .left {
+        width: 300px;
+        height: 100vh;
+        background-color: aquamarine;
+      }
+
+      .right {
+        width: 200px;
+        height: 100vh;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <header>头部头部头部头部头部头部头部</header>
+    <section class="body">
+      <aside class="left">左边栏-左边栏-左边栏-左边栏-左边栏-左边栏-左边栏</aside>
+      <section class="main">主要内容-主要内容-主要内容-主要内容-主要内容-主要内容</section>
+      <aside class="right">右边栏-右边栏-右边栏-右边栏-右边栏-右边栏-右边栏</aside>
+    </section>
+    <footer>底部底部底部底部底部底部底部</footer>
+  </body>
+</html>
